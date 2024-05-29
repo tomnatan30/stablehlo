@@ -12,6 +12,10 @@ An experimental pass that legalizes shape-related ops to StableHLO ops.
 Bringing shape and data computations together via an optional pass will
 make it possible for the StableHLO ecosystem to potentially leverage the
 compilation pipelines that use StableHLO operations to model dynamism.
+### `-stablehlo-aggressive-folder`
+
+_Folds StableHLO operations_
+
 ### `-stablehlo-aggressive-simplification`
 
 _Canonicalizes StableHLO operations_
@@ -26,6 +30,10 @@ are actually constant.
 
 For example, if the output_shape operand of DynamicReshapeOp is a constant
 value, then the operation can be transformed to ReshapeOp.
+### `-stablehlo-convert-to-signless`
+
+_Pass to transform the IR to be on signless integers._
+
 ### `-stablehlo-instrument-with-probe`
 
 _Inserts probe instrumentation instructions in a StableHLO program._
